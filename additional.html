@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel = "icon" href = "faviconBlue.ico" type = "image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=554945a3-c024-4e71-a5f6-88ca3ccd00a3&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="script.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous">
+  </script>
+
+    <title>ТСПК | Специальности</title>
+  </head>
+  <body>
+    <header>
+      
+      <div class="header_burger"><span></span></div>
+      <div class="wrapperReg">
+        <div class="menuReg">
+            <div class="headerPop">
+              <div class="headerPopLeft">
+                <div class="regBtn"><span></span></div>
+                <!-- <button class = "close"><img src="popCloseIcon.png" alt=""></button> -->
+                <h1 class = "popupTitle">регистрация</h1>
+              </div>
+              <div class="headerPopRight">
+                <img src="signImg.png" alt="">
+                <p style = "font-size: 12px; text-transform: uppercase; color: #628298; font-weight: 900;"><span class = "signInLink" style = "cursor: pointer;">Вход</span> | регистрация</p>
+              </div>
+            </div>
+            <div class="popupContainer">
+              <form action="#" class = "regForm">
+                <div class="formFlex">
+                  <div class="leftSideForm">
+                    <label for="text">Имя</label>
+                    <input type="text">
+                    <label for="email">E-mail</label>
+                    <input type="email">
+                    <label for="password">Введите пароль</label>
+                    <input type="password">
+                    <input type = "submit" value = "Зарегистрироваться"></input>
+                  </div>
+                  <div class="rightSideForm">
+                    <label for="text">Фамилия</label>
+                    <input type="text">
+                    <label for="tel">Телефон</label>
+                    <input type="tel">
+                    <label for="password">Повторите пароль</label>
+                    <input type="password">
+                    <p style = "font-size:13px; font-weight: 300; max-width: 250px; width: 100%; margin-top: 15px;">Нажимая «Зарегистрироваться», 
+                      вы соглашаетесь с <a href = "">правилами сервиса</a> 
+                      и <a href = "">обработки персональных данных</a></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+      <div class="wrapperSignIn">
+        <div class="menuSignIn">
+            <div class="headerPop">
+              <div class="headerPopLeft">
+                <div class="signBtn"><span></span></div>
+                <!-- <button class = "close"><img src="popCloseIcon.png" alt=""></button> -->
+                <h1 class = "popupTitle">войти в личный кабинет</h1>
+              </div>
+              <div class="headerPopRight">
+                <img src="signImg.png" alt="" style = "margin-right: 10px;">
+                <p style = "font-size: 12px; text-transform: uppercase; color: #628298; font-weight: 900;">Вход | <span class = "regLink" style = "cursor: pointer;">регистрация</span></p>
+              </div>
+            </div>
+            <div class="popupContainer">
+              <form action="#" class = "signInForm">
+                <label for="email">E-mail</label>
+                <input type="email">
+                <label for="password">Введите пароль</label>
+                <input type="password">
+                <input type = "submit" value = "Войти"></input>
+              </form>
+            </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="menuPopup">
+            <div class="headerPop">
+              <div class="headerPopLeft">
+                <div class="popupBtn"><span></span></div>
+                <!-- <button class = "close"><img src="popCloseIcon.png" alt=""></button> -->
+                <h1 class = "popupTitle">основное меню</h1>
+              </div>
+              <div class="headerPopRight">
+                <img src="signImg.png" alt="" style = "margin-right: 10px;">
+                <p style = "font-size: 12px; text-transform: uppercase; color: #628298; 
+                font-weight: 900; letter-spacing: 1px;">
+                <span class = "signInLink" style = "cursor: pointer;">Вход</span> | <span class = "regLink" style = "cursor: pointer;">регистрация</span></p>
+              </div>
+            </div>
+            <div class="popupContainer">
+              <h1 style = "font-size: 17px; color: #636363;font-weight: 900;text-transform: uppercase; margin-top: 30px; margin-left: 3px;">поиск</h1>
+              <input type="text" placeholder="Введите поисковый запрос"><img src="" alt="">
+            <div class="accordion" id="accordion-1">
+              <div class="accordion__item ">
+                <div class="accordion__header">
+                  <div class="accordionFlex">
+                    <img src="popIcon1.png" alt="">
+                    <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">Главная</p>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur et numquam optio, aut consequuntur iure magni
+                  tempore quo, velit, quos ipsum perferendis sit quidem sapiente voluptatem nesciunt rerum soluta amet.
+                </div>
+              </div>
+              <!-- 2 -->
+              <div class="accordion__item accordion__item_show">
+                <div class="accordion__header">
+                  <div class="accordionFlex">
+                    <img src="popSvedIcon.png" alt="">
+                    <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">Сведения об образовательной организации</p>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <p><a href="">Основные сведения</a></p>
+                  <p><a href="">Структура и органы управления образовательной организацией</a></p>
+                  <p><a href = "">Документы</a></p>
+                  <p><a href="">Образование</a></p>
+                  <p><a href="">Образовательные стандарты и требования</a></p>
+                  <p><a href="">Руководство. Педагогический (научно-педагогический состав)</a></p>
+                  <p><a href="">Материально-техническое обеспечение и оснащенность 
+                    образовательного процесса</a></p>
+                  <p><a href="">Стипендии и иные виды материальной поддержки</a></p>
+                  <p><a href="">Платные образовательные услуги</a></p>
+                  <p><a href="">Финансово-хозяйственная деятельность</a></p>
+                  <p><a href="">Вакантные места для приема (перевода) обучающихся</a></p>
+                  <p><a href="">Доступная среда</a></p>
+                  <p><a href="">Международное сотрудничество</a></p>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="accordion__item">
+                <div class="accordion__header">
+                  <div class="accordionFlex">
+                    <img src="popDocsIcon.png" alt="">
+                    <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">ДОКУМЕНТЫ</p>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid repellat dicta vel sapiente laudantium minima
+                  porro voluptatem nam, alias aliquam qui quasi eveniet odit fugiat eius aspernatur nesciunt veniam expedita!
+                </div>
+              </div>
+              <!-- 4 -->
+              <div class="accordion__item">
+                <div class="accordion__header">
+                  <div class="accordionFlex">
+                    <img src="popAbitIcon.png" alt="">
+                    <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">АБИТУРИЕНТУ</p>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid repellat dicta vel sapiente laudantium minima
+                  porro voluptatem nam, alias aliquam qui quasi eveniet odit fugiat eius aspernatur nesciunt veniam expedita!
+                </div>
+              </div>
+              <!-- 5 -->
+              <div class="accordion__item">
+                <div class="accordion__header">
+                  <div class="accordionFlex">
+                    <img src="popStudIcon.png" alt="">
+                    <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">СТУДЕНТАМ</p>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid repellat dicta vel sapiente laudantium minima
+                  porro voluptatem nam, alias aliquam qui quasi eveniet odit fugiat eius aspernatur nesciunt veniam expedita!
+                </div>
+              </div>
+            </div>
+          
+          
+            <script>
+              $('.header_burger').on('click', function(e){
+                e.preventDefault();
+                $('.menuPopup').toggleClass('menuPopup_active');
+                // $('.header_burger').toggleClass('active');
+                $('.wrapper').toggleClass('show');
+              });
+              $('.popupBtn').on('click', function(){
+                $('.menuPopup').toggleClass('menuPopup_active');
+                $('.wrapper').toggleClass('show');
+                // $('.header_burger').toggleClass('active');
+              });
+              $('.signInLink').on('click', function(){
+                $('.wrapperSignIn').toggleClass('show');
+                $('.wrapper').removeClass('show');
+                $('.menuPopup').removeClass('menuPopup_active');
+                // $('.header_burger').toggleClass('active');
+              });
+              $('.signBtn').on('click', function(){
+                $('.wrapperSignIn').toggleClass('show');
+                $('.wrapperReg').removeClass('show');
+                $('.wrapper').toggleClass('show');
+                $('.menuPopup').toggleClass('menuPopup_active');
+                // $('.header_burger').toggleClass('active');
+              });
+              $('.regLink').on('click', function(){
+                $('.wrapper').removeClass('show');
+                $('.wrapperSignIn').removeClass('show');  
+                $('.menuPopup').removeClass('menuPopup_active');
+                // $('.header_burger').toggleClass('active');
+                $('.wrapperReg').toggleClass('show');
+              });
+              $('.regBtn').on('click', function(){
+                $('.wrapperReg').removeClass('show');
+                $('.menuPopup').toggleClass('menuPopup_active');
+                $('.wrapper').toggleClass('show');
+                $('.wrapperSignIn').removeClass('show');
+
+                // $('.header_burger').toggleClass('active');
+              });
+              class ItcAccordion {
+                constructor(target, config) {
+                  this._el = typeof target === 'string' ? document.querySelector(target) : target;
+                  const defaultConfig = {
+                    alwaysOpen: true
+                  };
+                  this._config = Object.assign(defaultConfig, config);
+                  this.addEventListener();
+                }
+                addEventListener() {
+                  this._el.addEventListener('click', (e) => {
+                    const elHeader = e.target.closest('.accordion__header');
+                    if (!elHeader) {
+                      return;
+                    }
+                    if (!this._config.alwaysOpen) {
+                      const elOpenItem = this._el.querySelector('.accordion__item_show');
+                      if (elOpenItem) {
+                        elOpenItem !== elHeader.parentElement ? elOpenItem.classList.toggle('accordion__item_show') : null;
+                      }
+                    }
+                    elHeader.parentElement.classList.toggle('accordion__item_show');
+                  });
+                }
+              }
+          
+              new ItcAccordion('#accordion-1');
+              new ItcAccordion('#accordion-2');
+    
+              
+    
+            </script>
+            </div>
+        </div>
+      </div>
+      <!-- popup -->
+<div class="headerInner">
+      <div class="logoTspk"><img src="Tspklogo.png" alt="tspk" /></div>
+      <div class="headerMenu">
+        <ul>
+          <li><a href="">Главная</a></li>
+          <li><a href="">Документы</a></li>
+          <li><a href="">Абитуриенту</a></li>
+          <li><a href="">Студентам</a></li>
+          <li><a href="">Родителям</a></li>
+        </ul>
+      </div>
+      <div class="headerContacts">
+        <div class="numberContact">
+          <img src="Phone.png" alt="phone" />
+          <p>8(8482)24-10-25</p>
+        </div>
+        <div class="emailContact">
+          <img src="Email.png" alt="Email" />
+          <p>tspk@edu.tgl.ru</p>
+        </div>
+      </div>
+      <div class="imparedBlock">
+        <div class="imparedImg">
+          <img src="impared.png" alt="impared" />
+        </div>
+        <div class="imparedTextblock">
+          <p>Версия</p>
+          <p>для слабовидящих</p>
+        </div>
+      </div>
+    </div>
+    <div class="secondSection">
+      <div class="container">
+        <div class="leftBlock">
+          <p class="firstSent">
+            государственное автономное профессиональное образовательное
+          </p>
+          <p class="firstSent">учреждение Самарской области</p>
+          <p class="secondSent">ТОЛЬЯТТИНСКИЙ</p>
+          <p class="thirdSent">СОЦИАЛЬНО-ПЕДАГОГИЧЕСКИЙ</p>
+          <p class="fourthSent">КОЛЛЕДЖ</p>
+        </div>
+        <div class="rightBlock">
+          <img src="rightImg.png" alt="tech" />
+        </div>
+        <div class="buttonBlock">
+          <div class="investBlock">
+            <div class="investText">
+              <p>Инвестируй в своё будущее</p>
+            </div>
+            <div class="investImgArrow">
+              <img src="Arrow right alt.png" alt="arrowRight" />
+            </div>
+          </div>
+          <button class="directionsBtn">
+            Направления <img src="Arrow circle down.png" alt="arrowDown" />
+          </button>
+        </div>
+      </div>
+    </div>
+    </header>
+    <main>
+      <div class="mainContainer">
+            <p class="greetWords">Расширяй границы обучения</p>
+            <h1 class="titleClass" style = "margin-bottom: 60px;">ДОПОЛНИТЕЛЬНОЕ ПРОФЕССИОНАЛЬНОЕ ОБРАЗОВАНИЕ</h1>
+            <div class="additionalImgBlock">
+                <img src="additionalImg.png" alt="">
+            </div>
+            <button class = "additionalBtn">Выбрать направление</button>
+            <h1 class="titleClass" style = "margin-bottom: 30px; text-align: center;">ДОПОЛНИТЕЛЬНЫЕ ОБРАЗОВАТЕЛЬНЫЕ ПРОГРАММЫ</h1>
+        </div>
+        <div class="programContainer">
+            <div class="programBlock">
+                <div class="progLeftBlock">
+                    <div class="programName">
+                        <img src="childProg.png" alt="programIMG" style = "margin-right: 50px;">
+                        <p>Начальные <br>классы</p>
+                    </div>
+                    <!-- 2 -->
+                    <div class="programName">
+                        <img src="secondProg.png" alt="programIMG">
+                        <p>Дошкольное <br>образование</p>
+                    </div>
+                    <!-- 3 -->
+                    <div class="programName">
+                        <img src="thirdProg.png" alt="programIMG">
+                        <p>Физическая <br>культура</p>
+                    </div>
+                    <!-- 4 -->
+                    <div class="programName">
+                        <img src="fourthProg.png" alt="programIMG">
+                        <p>Адаптивная<br>физическая<br>культура</p>
+                    </div>
+                    <!-- 5 -->
+                    <div class="programName">
+                        <img src="fifthProg.png" alt="programIMG">
+                        <p>Информационные <br>системы <br>и программирование</p>
+                    </div>
+                    <!-- 6 -->
+                    <div class="programName">
+                        <img src="sixthProg.png" alt="programIMG" style = "margin-right: 43px;">
+                        <p>Компьютерные системы<br> и комплексы</p>
+                    </div>
+                    <!-- 7 -->
+                    <div class="programName">
+                        <img src="seventhProg.png" alt="programIMG">
+                        <p>Педагогика<br>дополнительного<br>образования</p>
+                    </div>
+                </div>
+                <div class="progRightBlock">
+                    <div class="titleProgBlock">
+                        <img src="titleProg.png" alt="">
+                        <p style = "font-size: 28px; color:#8b8b8b;font-weight: 300; ">Начальные классы</p>
+                    </div>
+                    <div class="progFlex">
+                        <div class="progCard">
+                            <div class="titleProgCard">
+                                <h1 style = "font-size: 16px; color: #68216f; font-weight: 600; text-transform: uppercase;">педагог дополнительного <BR>образования</h1>
+                            </div>
+                            <div class="subtitleProgCard">
+                                <h3>МОДУЛИ</h3>
+                            </div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">1</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Сценарно-режиссерская <br>постановка культурно-<br>анимационных программ <br>(Аниматор)</p>
+                                    <br>
+                                    <p>Лего-мультфильмы</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">2</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Основы цифровой фотографии и <br>компьютерная обработка <br>изображения и звука </p>
+                                    <br>
+                                    <p>Мир волшебства (декоративно-<br>прикладное искусство)</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">3</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Детский фитнес</p>
+                                    <br>
+                                    <p>Основы хореографии и танца</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">4</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Цифровые инструменты и <br>сервисы для  организации <br>онлайн занятий </p>
+                                    <br>
+                                    <p>Тьюторское сопровождение <br>детей с ОВЗ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progCard">
+                            <!-- 2 -->
+                            <div class="titleProgCard">
+                                <h1 style = "font-size: 16px; color: #68216f; font-weight: 600; text-transform: uppercase;">куратор<BR>онлайн курса</h1>
+                            </div>
+                            <div class="subtitleProgCard">
+                                <h3>МОДУЛИ</h3>
+                            </div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">1</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Введение в профессию "Куратор <br>онлайн курса" и основы тайм-<br>менеджмента</p>
+                                    <br>
+                                    <p>Оформление презентаций и <br>учебных материалов </p>
+                                    <br>
+                                    <p>Создание лендингов</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">2</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Образовательные онлайн-<br>платформы</p>
+                                    <br>
+                                    <p>Ведение вебинаров и подготовка <br>спикеров</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">3</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Цифровые инструменты и <br>сервисы для  организации <br>онлайн занятий </p>
+                                    <br>
+                                    <p>Образовательные онлайн-<br>платформы</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">4</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Личный бренд куратора онлайн-курса и его продвижение</p>
+                                    <br>
+                                    <p>Основы педагогического <br>дизайна</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="progCard">
+                            <div class="titleProgCard">
+                                <h1 style = "font-size: 16px; color: #68216f; font-weight: 600; text-transform: uppercase;">педагог-репетитор</h1>
+                            </div>
+                            <div class="subtitleProgCard">
+                                <h3>МОДУЛИ</h3>
+                            </div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">1</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Ментальная арифметика </p>
+                                    <br>
+                                    <p>Скорочтение</p>
+                                    <br>
+                                    <p>Калиграфия </p>
+                                    <br>
+                                    <p>Нейрофитнес</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">2</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Английский язык <br>для младших школьников </p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">3</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Подготовка детей <br>к обучению в школе </p>
+                                    <br>
+                                    <p>Цифровые инструменты и <br>сервисы для  организации <br>онлайн занятий </p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="progCardInner">
+                                <div class="numberCourse">
+                                    <p style = "font-size: 63px; font-weight: 900; color: #e2e2e2;">4</p>
+                                    <p style = "font-size: 13px; color: #e2e2e2;">курс</p>
+                                </div>
+                                <div class="progCardText">
+                                    <p>Личный бренд репетитора и его <br>продвижение</p>
+                                    <br>
+                                    <p>Тьюторское сопровождение <br>детей с ОВЗ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="spaceBlock"></div>
+      <div class="footerContainer">
+        <div class="footerSections">
+          <div class="leftSection">
+            <div class="logoTspk">
+              <img src="Tspklogo.png" alt="logoTspk" />
+            </div>
+            <p style = "font-size: 12px; line-height: 15px; font-weight: 800;color:#fff; margin-top: 30px;">МЫ В СОЦ. СЕТЯХ</p>
+            <div class="socialImgs">
+              <img src="vkImg.png" alt="vkImg" />
+              <img src="TelegramImg.png" alt="TelegramImg" />
+            </div>
+          </div>
+          <div class="middleSection">
+            <form action="" class="ContactWithUs">
+
+              <div class="contactLeftBlock">
+                <div class="labeldiv">
+                  <label for="text">ЗАДАТЬ ВОПРОС ПРОФЕССИОНАЛЬНОМУ КОЛЛЕДЖУ</label>
+                </div>
+
+                <div class="contactWithUs">
+                  <label for="text">Ваше имя <span style = "color: red;">*</span></label>
+                  <input style = "width: 300px; height: 40px;     border: none;
+                  border-radius: 3px;" type="text" class="nameInput" />
+                </div>
+                <div class="contactWithUs">
+                  <label for="phone">Ваш номер <span style = "color: red;">*</span></label>
+                  <input style = "width: 300px; height: 40px;     border: none;
+                  border-radius: 3px;" type="phone" class="phoneInput" />
+                </div>
+                <div class="contactWithUs">
+                  <label for="email">Ваш email <span style = "color: red;">*</span></label>
+                  <input style = "width: 300px; height: 40px;     border: none;
+                  border-radius: 3px;" type="email" class="emailInput" />
+                  
+
+                </div>
+                <input type="submit" value="Отправить" class="contactButton"/>
+                <div class="contactWithUs">
+                </div>
+              </div>
+              <div class="contactRightBlock">
+                <label for="textarea">Ваше сообщение <span style = "color: red;">*</span></label>
+                <textarea name="userMessage" id="userMsgText" cols="30" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="rightSection">
+            <div class="contactsInfo">
+              <p class = "contactsTitle">КОНТАКТЫ</p>
+              <div class="addressblock">
+                <div class="firstContacts">
+                  <p style = "font-weight: 500;">1 корпус:</p>
+                  <p>24-10-25 - Вахта 1 корпуса</p>
+                  <p>24-30-54 - Приемная директора</p>
+                  <p>E-mail: tspk@edu.tgl.ru</p>
+                </div>
+                <div class="secondContacts">
+                  <p>2 корпус:</p>
+                  <p>48-20-93 - Вахта 2 корпуса</p>
+                  <p>28-36-44 - Секретарь директора</p>
+                  <p>E-mail: tspk-zo@yandex.ru - заочное отделение</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrightBlock">
+        <span>ГАПОУ ТСПК | Дизайн, верстка, программирование | Шаров С.А. Ser53231987@yandex.ru | Тольятти, 2023 г.</span>
+      </div>
+    </footer>
+  </body>
+</html>

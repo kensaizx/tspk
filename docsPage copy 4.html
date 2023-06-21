@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=554945a3-c024-4e71-a5f6-88ca3ccd00a3&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script   src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous">
+  </script>
+    <script src="script.js"></script>
+</head>
+<body>
+  <div class="wrapperReg">
+    <div class="menuReg">
+        <div class="headerPop">
+          <div class="headerPopLeft">
+            <div class="regBtn"><span></span></div>
+            <!-- <button class = "close"><img src="popCloseIcon.png" alt=""></button> -->
+            <h1 class = "popupTitle">регистрация</h1>
+          </div>
+          <div class="headerPopRight">
+            <img src="signImg.png" alt="">
+            <p style = "font-size: 12px; text-transform: uppercase; color: #628298; font-weight: 900;">Вход | регистрация</p>
+          </div>
+        </div>
+        <div class="popupContainer">
+          <form action="#" class = "regForm">
+            <div class="formFlex">
+              <div class="leftSideForm">
+                <label for="text">Имя</label>
+                <input type="text">
+                <label for="email">E-mail</label>
+                <input type="email">
+                <label for="password">Введите пароль</label>
+                <input type="password">
+              </div>
+              <div class="rightSideForm">
+                <label for="text">Фамилия</label>
+                <input type="text">
+                <label for="tel">Телефон</label>
+                <input type="tel">
+                <label for="password">Повторите пароль</label>
+                <input type="password">
+                
+              </div>
+            </div>
+            <input type = "submit" value = "Войти"></input>
+          </form>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

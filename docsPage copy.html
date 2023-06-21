@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=554945a3-c024-4e71-a5f6-88ca3ccd00a3&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script   src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous">
+  </script>
+    <script src="script.js"></script>
+</head>
+<body>
+  <div class="header_burger"><span></span></div>
+  <div class="wrapper">
+    <div class="menuPopup">
+        <div class="headerPop">
+          <div class="headerPopLeft">
+            <div class="header_burger"><span></span></div>
+            <!-- <button class = "close"><img src="popCloseIcon.png" alt=""></button> -->
+            <h1 class = "popupTitle">основное меню</h1>
+          </div>
+          <div class="headerPopRight">
+            <img src="signImg.png" alt="">
+            <p style = "font-size: 12px; text-transform: uppercase; color: #628298; font-weight: 900;">Вход | регистрация</p>
+          </div>
+        </div>
+        <div class="popupContainer">
+          <h1 style = "font-size: 17px; color: #636363;font-weight: 900;text-transform: uppercase; margin-top: 30px; margin-left: 3px;">поиск</h1>
+          <input type="text" placeholder="Введите поисковый запрос"><img src="" alt="">
+        <div class="accordion" id="accordion-1">
+          <div class="accordion__item ">
+            <div class="accordion__header">
+              <div class="accordionFlex">
+                <img src="popIcon1.png" alt="">
+                <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">Главная</p>
+              </div>
+            </div>
+            <div class="accordion__body">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur et numquam optio, aut consequuntur iure magni
+              tempore quo, velit, quos ipsum perferendis sit quidem sapiente voluptatem nesciunt rerum soluta amet.
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="accordion__item accordion__item_show">
+            <div class="accordion__header">
+              <div class="accordionFlex">
+                <img src="popSvedIcon.png" alt="">
+                <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">Сведения об образовательной организации</p>
+              </div>
+            </div>
+            <div class="accordion__body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non earum deleniti recusandae placeat rem eius quod
+              aliquid adipisci nemo alias debitis corporis pariatur quibusdam est, porro fuga id iure vero?
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="accordion__item">
+            <div class="accordion__header">
+              <div class="accordionFlex">
+                <img src="popDocsIcon.png" alt="">
+                <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">ДОКУМЕНТЫ</p>
+              </div>
+            </div>
+            <div class="accordion__body">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid repellat dicta vel sapiente laudantium minima
+              porro voluptatem nam, alias aliquam qui quasi eveniet odit fugiat eius aspernatur nesciunt veniam expedita!
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="accordion__item">
+            <div class="accordion__header">
+              <div class="accordionFlex">
+                <img src="popAbitIcon.png" alt="">
+                <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">АБИТУРИЕНТУ</p>
+              </div>
+            </div>
+            <div class="accordion__body">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid repellat dicta vel sapiente laudantium minima
+              porro voluptatem nam, alias aliquam qui quasi eveniet odit fugiat eius aspernatur nesciunt veniam expedita!
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="accordion__item">
+            <div class="accordion__header">
+              <div class="accordionFlex">
+                <img src="popStudIcon.png" alt="">
+                <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">СТУДЕНТАМ</p>
+              </div>
+            </div>
+            <div class="accordion__body">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid repellat dicta vel sapiente laudantium minima
+              porro voluptatem nam, alias aliquam qui quasi eveniet odit fugiat eius aspernatur nesciunt veniam expedita!
+            </div>
+          </div>
+        </div>
+      
+      
+        <script>
+          $('.header_burger').on('click', function(e){
+            e.preventDefault();
+            $('.menuPopup').toggleClass('menuPopup_active');
+            $('.header_burger').toggleClass('active');
+          });
+          $('.popupBtn').on('click', function(e){
+            e.preventDefault();
+            $('.menuPopup').toggleClass('menuPopup_active');
+          });
+          class ItcAccordion {
+            constructor(target, config) {
+              this._el = typeof target === 'string' ? document.querySelector(target) : target;
+              const defaultConfig = {
+                alwaysOpen: true
+              };
+              this._config = Object.assign(defaultConfig, config);
+              this.addEventListener();
+            }
+            addEventListener() {
+              this._el.addEventListener('click', (e) => {
+                const elHeader = e.target.closest('.accordion__header');
+                if (!elHeader) {
+                  return;
+                }
+                if (!this._config.alwaysOpen) {
+                  const elOpenItem = this._el.querySelector('.accordion__item_show');
+                  if (elOpenItem) {
+                    elOpenItem !== elHeader.parentElement ? elOpenItem.classList.toggle('accordion__item_show') : null;
+                  }
+                }
+                elHeader.parentElement.classList.toggle('accordion__item_show');
+              });
+            }
+          }
+      
+          new ItcAccordion('#accordion-1');
+          new ItcAccordion('#accordion-2');
+
+          
+
+        </script>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

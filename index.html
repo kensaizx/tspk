@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel = "icon" href = "faviconBlue.ico" type = "image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=554945a3-c024-4e71-a5f6-88ca3ccd00a3&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="script.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous">
+  </script>
+
+    <title>Главная</title>
+  </head>
+  <body>
+    <header>
+      
+      <div class="header_burger"><span></span></div>
+      <div class="wrapperReg">
+        <div class="menuReg">
+            <div class="headerPop">
+              <div class="headerPopLeft">
+                <div class="regBtn"><span></span></div>
+                <!-- <button class = "close"><img src="popCloseIcon.png" alt=""></button> -->
+                <h1 class = "popupTitle">регистрация</h1>
+              </div>
+              <div class="headerPopRight">
+                <img src="signImg.png" alt="">
+                <p style = "font-size: 12px; text-transform: uppercase; color: #628298; font-weight: 900;"><span class = "signInLink" style = "cursor: pointer;">Вход</span> | регистрация</p>
+              </div>
+            </div>
+            <div class="popupContainer">
+              <form action="#" class = "regForm">
+                <div class="formFlex">
+                  <div class="leftSideForm">
+                    <label for="text">Имя</label>
+                    <input type="text">
+                    <label for="email">E-mail</label>
+                    <input type="email">
+                    <label for="password">Введите пароль</label>
+                    <input type="password">
+                    <input type = "submit" value = "Зарегистрироваться"></input>
+                  </div>
+                  <div class="rightSideForm">
+                    <label for="text">Фамилия</label>
+                    <input type="text">
+                    <label for="tel">Телефон</label>
+                    <input type="tel">
+                    <label for="password">Повторите пароль</label>
+                    <input type="password">
+                    <p style = "font-size:13px; font-weight: 300; max-width: 250px; width: 100%; margin-top: 15px;">Нажимая «Зарегистрироваться», 
+                      вы соглашаетесь с <a href = "">правилами сервиса</a> 
+                      и <a href = "">обработки персональных данных</a></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+      <div class="wrapperSignIn">
+        <div class="menuSignIn">
+            <div class="headerPop">
+              <div class="headerPopLeft">
+                <div class="signBtn"><span></span></div>
+                <!-- <button class = "close"><img src="popCloseIcon.png" alt=""></button> -->
+                <h1 class = "popupTitle">войти в личный кабинет</h1>
+              </div>
+              <div class="headerPopRight">
+                <img src="signImg.png" alt="" style = "margin-right: 10px;">
+                <p style = "font-size: 12px; text-transform: uppercase; color: #628298; font-weight: 900;">Вход | <span class = "regLink" style = "cursor: pointer;">регистрация</span></p>
+              </div>
+            </div>
+            <div class="popupContainer">
+              <form action="#" class = "signInForm">
+                <label for="email">E-mail</label>
+                <input type="email">
+                <label for="password">Введите пароль</label>
+                <input type="password">
+                <input type = "submit" value = "Войти"></input>
+              </form>
+            </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="menuPopup">
+            <div class="headerPop">
+              <div class="headerPopLeft">
+                <div class="popupBtn"><span></span></div>
+                <!-- <button class = "close"><img src="popCloseIcon.png" alt=""></button> -->
+                <h1 class = "popupTitle">основное меню</h1>
+              </div>
+              <div class="headerPopRight">
+                <img src="signImg.png" alt="" style = "margin-right: 10px;">
+                <p style = "font-size: 12px; text-transform: uppercase; color: #628298; 
+                font-weight: 900; letter-spacing: 1px;">
+                <span class = "signInLink" style = "cursor: pointer;">Вход</span> | <span class = "regLink" style = "cursor: pointer;">регистрация</span></p>
+              </div>
+            </div>
+            <div class="popupContainer">
+              <h1 style = "font-size: 17px; color: #636363;font-weight: 900;text-transform: uppercase; margin-top: 30px; margin-left: 3px;">поиск</h1>
+              <input type="text" placeholder="Введите поисковый запрос"><img src="" alt="">
+            <div class="accordion" id="accordion-1">
+              <div class="accordion__item ">
+                <div class="accordion__header">
+                  <div class="accordionFlex">
+                    <img src="popIcon1.png" alt="">
+                    <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">Главная</p>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur et numquam optio, aut consequuntur iure magni
+                  tempore quo, velit, quos ipsum perferendis sit quidem sapiente voluptatem nesciunt rerum soluta amet.
+                </div>
+              </div>
+              <!-- 2 -->
+              <div class="accordion__item accordion__item_show">
+                <div class="accordion__header">
+                  <div class="accordionFlex">
+                    <img src="popSvedIcon.png" alt="">
+                    <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">Сведения об образовательной организации</p>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <p><a href="">Основные сведения</a></p>
+                  <p><a href="">Структура и органы управления образовательной организацией</a></p>
+                  <p><a href = "">Документы</a></p>
+                  <p><a href="">Образование</a></p>
+                  <p><a href="">Образовательные стандарты и требования</a></p>
+                  <p><a href="">Руководство. Педагогический (научно-педагогический состав)</a></p>
+                  <p><a href="">Материально-техническое обеспечение и оснащенность 
+                    образовательного процесса</a></p>
+                  <p><a href="">Стипендии и иные виды материальной поддержки</a></p>
+                  <p><a href="">Платные образовательные услуги</a></p>
+                  <p><a href="">Финансово-хозяйственная деятельность</a></p>
+                  <p><a href="">Вакантные места для приема (перевода) обучающихся</a></p>
+                  <p><a href="">Доступная среда</a></p>
+                  <p><a href="">Международное сотрудничество</a></p>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="accordion__item">
+                <div class="accordion__header">
+                  <div class="accordionFlex">
+                    <img src="popDocsIcon.png" alt="">
+                    <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">ДОКУМЕНТЫ</p>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid repellat dicta vel sapiente laudantium minima
+                  porro voluptatem nam, alias aliquam qui quasi eveniet odit fugiat eius aspernatur nesciunt veniam expedita!
+                </div>
+              </div>
+              <!-- 4 -->
+              <div class="accordion__item">
+                <div class="accordion__header">
+                  <div class="accordionFlex">
+                    <img src="popAbitIcon.png" alt="">
+                    <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">АБИТУРИЕНТУ</p>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid repellat dicta vel sapiente laudantium minima
+                  porro voluptatem nam, alias aliquam qui quasi eveniet odit fugiat eius aspernatur nesciunt veniam expedita!
+                </div>
+              </div>
+              <!-- 5 -->
+              <div class="accordion__item">
+                <div class="accordion__header">
+                  <div class="accordionFlex">
+                    <img src="popStudIcon.png" alt="">
+                    <p style = "font-size: 17px; color: #626262; font-weight: 900; text-transform: uppercase;">СТУДЕНТАМ</p>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid repellat dicta vel sapiente laudantium minima
+                  porro voluptatem nam, alias aliquam qui quasi eveniet odit fugiat eius aspernatur nesciunt veniam expedita!
+                </div>
+              </div>
+            </div>
+          
+          
+            <script>
+              $('.header_burger').on('click', function(e){
+                e.preventDefault();
+                $('.menuPopup').toggleClass('menuPopup_active');
+                // $('.header_burger').toggleClass('active');
+                $('.wrapper').toggleClass('show');
+              });
+              $('.popupBtn').on('click', function(){
+                $('.menuPopup').toggleClass('menuPopup_active');
+                $('.wrapper').toggleClass('show');
+                // $('.header_burger').toggleClass('active');
+              });
+              $('.signInLink').on('click', function(){
+                $('.wrapperSignIn').toggleClass('show');
+                $('.wrapper').removeClass('show');
+                $('.menuPopup').removeClass('menuPopup_active');
+                // $('.header_burger').toggleClass('active');
+              });
+              $('.signBtn').on('click', function(){
+                $('.wrapperSignIn').toggleClass('show');
+                $('.wrapperReg').removeClass('show');
+                $('.wrapper').toggleClass('show');
+                $('.menuPopup').toggleClass('menuPopup_active');
+                // $('.header_burger').toggleClass('active');
+              });
+              $('.regLink').on('click', function(){
+                $('.wrapper').removeClass('show');
+                $('.wrapperSignIn').removeClass('show');  
+                $('.menuPopup').removeClass('menuPopup_active');
+                // $('.header_burger').toggleClass('active');
+                $('.wrapperReg').toggleClass('show');
+              });
+              $('.regBtn').on('click', function(){
+                $('.wrapperReg').removeClass('show');
+                $('.menuPopup').toggleClass('menuPopup_active');
+                $('.wrapper').toggleClass('show');
+                $('.wrapperSignIn').removeClass('show');
+
+                // $('.header_burger').toggleClass('active');
+              });
+              class ItcAccordion {
+                constructor(target, config) {
+                  this._el = typeof target === 'string' ? document.querySelector(target) : target;
+                  const defaultConfig = {
+                    alwaysOpen: true
+                  };
+                  this._config = Object.assign(defaultConfig, config);
+                  this.addEventListener();
+                }
+                addEventListener() {
+                  this._el.addEventListener('click', (e) => {
+                    const elHeader = e.target.closest('.accordion__header');
+                    if (!elHeader) {
+                      return;
+                    }
+                    if (!this._config.alwaysOpen) {
+                      const elOpenItem = this._el.querySelector('.accordion__item_show');
+                      if (elOpenItem) {
+                        elOpenItem !== elHeader.parentElement ? elOpenItem.classList.toggle('accordion__item_show') : null;
+                      }
+                    }
+                    elHeader.parentElement.classList.toggle('accordion__item_show');
+                  });
+                }
+              }
+          
+              new ItcAccordion('#accordion-1');
+              new ItcAccordion('#accordion-2');
+    
+              
+    
+            </script>
+            </div>
+        </div>
+      </div>
+      <!-- popup -->
+<div class="headerInner">
+      <div class="logoTspk"><img src="Tspklogo.png" alt="tspk" /></div>
+      <div class="headerMenu">
+        <ul>
+          <li><a href="">Главная</a></li>
+          <li><a href="">Документы</a></li>
+          <li><a href="">Абитуриенту</a></li>
+          <li><a href="">Студентам</a></li>
+          <li><a href="">Родителям</a></li>
+        </ul>
+      </div>
+      <div class="headerContacts">
+        <div class="numberContact">
+          <img src="Phone.png" alt="phone" />
+          <p>8(8482)24-10-25</p>
+        </div>
+        <div class="emailContact">
+          <img src="Email.png" alt="Email" />
+          <p>tspk@edu.tgl.ru</p>
+        </div>
+      </div>
+      <div class="imparedBlock">
+        <div class="imparedImg">
+          <img src="impared.png" alt="impared" />
+        </div>
+        <div class="imparedTextblock">
+          <p>Версия</p>
+          <p>для слабовидящих</p>
+        </div>
+      </div>
+    </div>
+    <div class="secondSection">
+      <div class="container">
+        <div class="leftBlock">
+          <p class="firstSent">
+            государственное автономное профессиональное образовательное
+          </p>
+          <p class="firstSent">учреждение Самарской области</p>
+          <p class="secondSent">ТОЛЬЯТТИНСКИЙ</p>
+          <p class="thirdSent">СОЦИАЛЬНО-ПЕДАГОГИЧЕСКИЙ</p>
+          <p class="fourthSent">КОЛЛЕДЖ</p>
+        </div>
+        <div class="rightBlock">
+          <img src="rightImg.png" alt="tech" />
+        </div>
+        <div class="buttonBlock">
+          <div class="investBlock">
+            <div class="investText">
+              <p>Инвестируй в своё будущее</p>
+            </div>
+            <div class="investImgArrow">
+              <img src="Arrow right alt.png" alt="arrowRight" />
+            </div>
+          </div>
+          <button class="directionsBtn">
+            Направления <img src="Arrow circle down.png" alt="arrowDown" />
+          </button>
+        </div>
+      </div>
+    </div>
+    </header>
+    <main>
+      <div class="numberSection">
+        <span>01</span>
+      </div>
+      <div class="mainContainer">
+        <p class="greetWords">Приветственное слово директора</p>
+        <h1 class="titleClass">УВАЖАЕМЫЕ ПОСЕТИТЕЛИ</h1>
+        <div class="greetBlocks">
+          <div class="leftGreetBlock">
+            <img src="director.png" alt="directorIMG" />
+          </div>
+          <div class="rightGreetBlock">
+            <p>
+              Рады приветствовать Вас на официальном сайте Тольяттинского
+              социально-педагогического колледжа! (ТСПК) <br />
+              Наш сайт предназначен широкому кругу общественности, адресован как
+              студентам, так и заинтересованным родителям. <br />
+              Мы с удовольствием расскажем Вам, чем живет наш колледж, порадуем
+              нашими достижениями и победами. Надеемся, что здесь Вы найдете
+              интересную и полезную информацию и убедитесь в качественной работе
+              нашего персонала. <br />
+              Благодарим за внимание к сайту!
+            </p>
+            <p
+              style="
+                color: #239221;
+                text-align: end;
+                font-size: 15px;
+                font-weight: 500;
+              "
+            >
+              С уважением, Ланчиков Максим Николаевич, директор ГАПОУ ТСПК
+            </p>
+          </div>
+        </div>
+      </div>
+        <div class="numberSection">
+          <span>02</span>
+        </div>
+        <div class="mainContainer">
+        <p class="greetWords">Быстрый доступ</p>
+        <h1 class="titleClass">ПОПУЛЯРНЫЕ КАТЕГОРИИ</h1>
+        <div class="categoriesBlock">
+          <div class="firstLine">
+            <div class="CategoryBlock">
+              <div class="CatBlockContent">
+                  <img
+                    class="checkRas"
+                    src="educationWhite.png"
+                    alt="educationIMG"
+                  />
+                  <img
+                    class="noCheckRas"
+                    src="education.png"
+                    alt="educationIMG"
+                  />
+                </div>
+                <div class="textCategoryBlock">
+                  <p class="tesxColor">
+                    Сведения об<br />
+                    образовательной <br />организации
+                  </p>
+                </div>
+              
+            </div>
+            <div class="CategoryBlock">
+              <div class="CatBlockContent">
+                <img class="checkRas" src="Vector.png" alt="dateIMG" />
+                <img class="noCheckRas" src="dateGrey.png" alt="dateIMG" />
+              </div>
+              <div class="textCategoryBlock">
+                <p class="tesxColor">Расписание <br />занятий</p>
+              </div>
+            </div>
+            <div class="CategoryBlock">
+              <div class="CatBlockContent">
+                <img class="checkRas" src="Supervisor accountWhite.png" alt="dateIMG" />
+                <img class="noCheckRas" src="Supervisor account.svg" alt="dateIMG" />
+                </div>
+                <div class="textCategoryBlock">
+                  <p class = "tesxColor">
+                    Приемная<br />
+                    комиссия
+                  </p>
+                </div>
+            </div>
+            <div class="CategoryBlock">
+              <div class="CatBlockContent">
+                  <img class="checkRas" src="specialitiesWhite.png" alt="dateIMG" />
+                  <img class="noCheckRas" src="specialities.png" alt="dateIMG" />
+                </div>
+                <div class="textCategoryBlock">
+                  <p class = "tesxColor">
+                    Наши <br />
+                    специальности
+                  </p>
+                </div>
+            </div>
+          </div>
+          <div class="secondLine">
+            <div class="CategoryBlock">
+              <div class="CatBlockContent">
+                  <img class="checkRas" src="ExtensionWhite.png" alt="dateIMG" />
+                  <img class="noCheckRas" src="Extension.png" alt="dateIMG" />
+                </div>
+                <div class="textCategoryBlock">
+                  <p class = "tesxColor">Дуальное <br />обучение</p>
+                </div>
+            </div>
+            <div class="CategoryBlock">
+              <div class="CatBlockContent">
+                  <img class = "checkRas" src ="MediationWhite.png" alt="MediationIMG" />
+                  <img class="noCheckRas" src="Mediation.png" alt="dateIMG" />
+                </div>
+                <div class="textCategoryBlock">
+                  <p class = "tesxColor">Содействие <br />трудоустройству<br />выпускников</p>
+              </div>
+            </div>
+            <div class="CategoryBlock">
+              <div class="CatBlockContent">
+                  <img class = "checkRas" src ="Local fireWhite.png" alt="MediationIMG" />
+                  <img class="noCheckRas" src="localFire.png" alt="dateIMG" />
+                </div>
+                <div class="textCategoryBlock">
+                  <p class = "tesxColor">
+                    Дополнительное <br />
+                    профессиональное <br />образование
+                  </p>
+                </div>
+            </div>
+            <div class="CategoryBlock">
+              <div class="CatBlockContent">
+                  <img class = "checkRas" src ="profLogoWhite.png" alt="MediationIMG" />
+                  <img class="noCheckRas" src="profLogo.png" alt="dateIMG" />
+                </div>
+                <div class="textCategoryBlock">
+                  <p class = "tesxColor">
+                    Проф. мастерство <br />
+                    Профессионалы
+                  </p>
+                </div>
+            </div>
+          </div>
+          <button class="viewMoreBtn">Смотреть ещё</button>
+        </div>
+        </div>
+        <div class="numberSection">
+          <span>03</span>
+        </div>
+        <div class="mainContainer">
+        <div class="greetWords">Почему мы лучше</div>
+        <h1 class="titleClass">НАШИ НАПРАВЛЕНИЯ ПОДГОТОВКИ</h1>
+        <div class="directionsSection">
+          <div class="directionsBlock">
+            <div class="directImgBlock">
+              <img src="Grid.png" alt="gridPNG" />
+            </div>
+            <div class="directTextBlock">
+              <h2 class="directTitle">Дуальное <br />направление</h2>
+              <span
+                >Внедрение элементов дуального обучения в образовательной
+                организации СПО</span
+              >
+            </div>
+          </div>
+          <div class="directionsBlock">
+            <div class="directImgBlock">
+              <img src="forward.png" alt="forwardPNG" />
+            </div>
+            <div class="directTextBlock">
+              <h2 class="directTitle">БПОО</h2>
+              <span>Базовая профессиональная образовательная организация</span>
+            </div>
+          </div>
+          <div class="directionsBlock">
+            <div class="directImgBlock">
+              <img src="Language.png" alt="spherePNG" />
+            </div>
+            <div class="directTextBlock">
+              <h2 class="directTitle">ONLINE</h2>
+              <span
+                >Возможность дистанционного обучения на базе moodle и
+                BigBlueButton</span
+              >
+            </div>
+          </div>
+          <div class="directionsBlock">
+            <div class="directImgBlock">
+              <img src="Verified.png" alt="verifiedPNG" />
+            </div>
+            <div class="directTextBlock">
+              <h2 class="directTitle">КАЧЕСТВО</h2>
+              <span>Качественное обучение совершенно бесплатно</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="numberSection">
+          <span>04</span>
+        </div>
+        <div class="mainContainer">
+        <p class="greetWords">Будь в курсе наших событий</p>
+        <h1 class="titleClass">НОВОСТИ ТСПК</h1>
+        <div class="newsSection">
+          <div class="newsBlock">
+            <div class="newsImgBlock">
+              <img src="firstImg.png" alt="newsIMG" />
+            </div>
+            <div class="newsFeedbackBlock">
+              <div class="newsfbDate">
+                <div class="newsfbDateImg">
+                  <img src="calendar.png" alt="calendarIMG" />
+                </div>
+                <div class="newsfbDateText">13-3-2023</div>
+              </div>
+              <div class="newsLikesnViewsBlock">
+                <div class="newsViewsBlock">
+                  <div class="newsViewsImg">
+                    <img src="eye.png" alt="viewsIMG" />
+                  </div>
+                  <div class="newsViewsText">3125</div>
+                </div>
+                <div class="newsLikesBlock">
+                  <div class="newsLikesImg">
+                    <img src="likes.png" alt="likesIMG" />
+                  </div>
+                  <div class="newsLikesText">59</div>
+                </div>
+              </div>
+            </div>
+            <div class="newsTextBlock">
+              <span
+                >Сегодня на базе нашего колледжа состоялось открытие
+                студенческого клуба РСМ! Самарский Союз Молодежи совместно с
+                Центром профессионального образования Самарско ...</span
+              >
+            </div>
+            <a href="" class="newsMoreBtn">Подробнее ...</a>
+          </div>
+          <div class="newsBlock">
+            <div class="newsImgBlock">
+              <img src="secondNewsImg.png" alt="newsIMG" />
+            </div>
+            <div class="newsFeedbackBlock">
+              <div class="newsfbDate">
+                <div class="newsfbDateImg">
+                  <img src="calendar.png" alt="calendarIMG" />
+                </div>
+                <div class="newsfbDateText">12-3-2023</div>
+              </div>
+              <div class="newsLikesnViewsBlock">
+                <div class="newsViewsBlock">
+                  <div class="newsViewsImg">
+                    <img src="eye.png" alt="viewsIMG" />
+                  </div>
+                  <div class="newsViewsText">1926</div>
+                </div>
+                <div class="newsLikesBlock">
+                  <div class="newsLikesImg">
+                    <img src="likes.png" alt="likesIMG" />
+                  </div>
+                  <div class="newsLikesText">48</div>
+                </div>
+              </div>
+            </div>
+            <div class="newsTextBlock">
+              <span
+                >Сегодня студенты групп НК-32 и ФК-11 посетили центральную
+                городскую библиотеку. Темой обсуждения стала жизнь Льва
+                Николаевича Толстого и его жены. 📚Студенты просмотрели
+                видеоролик о жизни ...</span
+              >
+            </div>
+            <a href="" class="newsMoreBtn">Подробнее ...</a>
+          </div>
+          <div class="newsBlock">
+            <div class="newsImgBlock">
+              <img src="3rdnewsImg.png" alt="newsIMG" />
+            </div>
+            <div class="newsFeedbackBlock">
+              <div class="newsfbDate">
+                <div class="newsfbDateImg">
+                  <img src="calendar.png" alt="calendarIMG" />
+                </div>
+                <div class="newsfbDateText">12-3-2023</div>
+              </div>
+              <div class="newsLikesnViewsBlock">
+                <div class="newsViewsBlock">
+                  <div class="newsViewsImg">
+                    <img src="eye.png" alt="viewsIMG" />
+                  </div>
+                  <div class="newsViewsText">1926</div>
+                </div>
+                <div class="newsLikesBlock">
+                  <div class="newsLikesImg">
+                    <img src="likes.png" alt="likesIMG" />
+                  </div>
+                  <div class="newsLikesText">48</div>
+                </div>
+              </div>
+            </div>
+            <div class="newsTextBlock">
+              <span
+                >Наша студентка группы НК-32 Забродина Анастасия с командой КВН
+                «Ультиматум» стали участниками фестиваля центральной лиги КВН
+                «Поволжье» в Альметьевске, где представили Самару ...</span
+              >
+            </div>
+            <a href="" class="newsMoreBtn">Подробнее ...</a>
+          </div>
+          <div class="newsBlock">
+            <div class="newsImgBlock">
+              <img src="4rthnewsimg.png" alt="newsIMG" />
+            </div>
+            <div class="newsFeedbackBlock">
+              <div class="newsfbDate">
+                <div class="newsfbDateImg">
+                  <img src="calendar.png" alt="calendarIMG" />
+                </div>
+                <div class="newsfbDateText">13-3-2023</div>
+              </div>
+              <div class="newsLikesnViewsBlock">
+                <div class="newsViewsBlock">
+                  <div class="newsViewsImg">
+                    <img src="eye.png" alt="viewsIMG" />
+                  </div>
+                  <div class="newsViewsText">3125</div>
+                </div>
+                <div class="newsLikesBlock">
+                  <div class="newsLikesImg">
+                    <img src="likes.png" alt="likesIMG" />
+                  </div>
+                  <div class="newsLikesText">59</div>
+                </div>
+              </div>
+            </div>
+            <div class="newsTextBlock">
+              <span
+                >14 марта в 1 корпусе на Ленинградской, 28, и 15 марта во 2
+                корпусе на Мурысева,84 специалисты МБУ г.о. Тольятти ММЦ «Шанс»
+                Скурихина Алина Константиновна и Решаева Ольга Александровна
+                ...</span
+              >
+            </div>
+            <a href="" class="newsMoreBtn">Подробнее ...</a>
+          </div>
+        </div>
+        <button class="newsLoadMore">Загрузить ещё</button>
+      </div>
+      <div class="numberSection5">
+        <span>05</span>
+      </div>
+      <div class="resourcesContainer" style = "padding-top: 50px;">
+        <div class="mainContainer">
+          <p class="greetWords">Образовательные ресурсы</p>
+          <h1 class="titleResources">ЭЛЕКТРОННЫЕ РЕСУРСЫ</h1>
+          <div class="resourcesBlock">
+            <div class="courcesBlock">
+              <div class="courceBlock">
+                <div class="courceImg">
+                  <img src="moodleIcon.png" alt="moodleIMG" />
+                </div>
+                <div class="courceTextBlock">
+                  <span style="color: #fff; font-size: 13px; line-height: 15px"
+                    >Система дистанционного обучения
+                    <span style="font-weight: 700; color: #fff"
+                      ><br />
+                      Moodle</span
+                    ></span
+                  >
+                </div>
+              </div>
+              <div class="courceBlock">
+                <div class="courceImg">
+                  <img src="onlineIcon.png" alt="moodleIMG" />
+                </div>
+                <div class="courceTextBlock">
+                  <span style="color: #fff; font-size: 13px; line-height: 15px"
+                    >Перечень<br />
+                    <span style="font-weight: 700; color: #fff"> онлайн</span
+                    ><br />курсов</span
+                  >
+                </div>
+              </div>
+              <div class="courceBlock">
+                <div class="courceImg">
+                  <img src="bathasuIcon.png" alt="moodleIMG" />
+                </div>
+                <div class="courceTextBlock">
+                  <span style="color: #fff; font-size: 13px; line-height: 15px"
+                    >Электронная система<br />
+                    <span style="font-weight: 700; color: #fff">
+                      СПО АСУ РСО</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- TYTA -->
+            <div class="offer__slider">
+              <div class="offer__slider-counter">
+                <div class="offer__slider-prev">
+                  <img src="Arrow back ios.png" alt="prev" />
+                </div>
+                <span id="current">03</span>
+                /
+                <span id="total">04</span>
+                <div class="offer__slider-next">
+                  <img
+                    src="Arrow back ios.png"
+                    style="transform: rotate(180deg)"
+                    alt="next"
+                  />
+                </div>
+              </div>
+              <div class="offer__slider-wrapper">
+                <div class="offer__slide">
+                  <img src="navgator_2021_mini.png" alt="pepper" />
+                </div>
+                <div class="offer__slide">
+                  <img src="razgovori_o_vaznom_2022.png" alt="oil" />
+                </div>
+                <div class="offer__slide">
+                  <img src="bc_NN2.png" alt="paprika" />
+                </div>
+                <div class="offer__slide">
+                  <img src="Obiyesnieem2.png" alt="paprika" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mainContainer">
+          <div class="usefulLinksBlock">
+            <p class = "greetWords">Полезные ссылки</p>
+            <h1 class = "titleResources">ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h1>
+          </div>
+        </div>
+      </div>
+      <div class="numberSection">
+        <span>06</span>
+      </div>
+      <div class="mainContainer">
+        <p class="greetWords">Как нас найти</p>
+        <h1 class="titleClass" style="margin-bottom: 50px">КОНТАКТЫ</h1>
+        <div class="aboutBlocks">
+          <div class="leftAboutBlock">
+            <span style="color: #b0b0b0; font-size: 16px; line-height: 19px"
+              >Найти нас можно по адресу:</span
+            >
+            <p
+              style="
+                color: #628298;
+                font-size: 25px;
+                line-height: 30px;
+                margin-bottom: 30px;
+              "
+            >
+              Главный корпус:
+            </p>
+            <div class="about1stLine">
+              <div class="aboutImg1stLine">
+                <img src="googleMaps.png" alt="googleMapsIcon" />
+              </div>
+              <div class="aboutText1stLine">
+                Самарская область, г. Тольятти,
+                <br />
+                ул. Мурысева, 84
+              </div>
+            </div>
+            <div class="about1stLine">
+              <div class="aboutImg2ndLine">
+                <img src="phoneGrey.png" alt="googleMapsIcon" />
+              </div>
+              <div class="aboutText1stLine">Тел.:</div>
+              <div class="aboutText2ndLine">
+                <div class="aboutText1stNumber">24-10-25 (вахта)</div>
+                <div class="aboutText2ndNumber">24-30-54 (приемная)</div>
+              </div>
+            </div>
+            <p
+              style="
+                color: #628298;
+                font-size: 25px;
+                line-height: 30px;
+                margin-bottom: 30px;
+              "
+            >
+              Второй корпус:
+            </p>
+            <div class="about1stLine">
+              <div class="aboutImg1stLine">
+                <img src="googleMaps.png" alt="googleMapsIcon" />
+              </div>
+              <div class="aboutText1stLine">
+                Самарская область, г. Тольятти,
+                <br />
+                ул. Ленинградская, 28
+              </div>
+            </div>
+            <div class="about1stLine">
+              <div class="aboutImg2ndLine">
+                <img src="phoneGrey.png" alt="googleMapsIcon" />
+              </div>
+              <div class="aboutText1stLine">Тел.:</div>
+              <div class="aboutText2ndLine">
+                <div class="aboutText1stNumber">28-36-44</div>
+              </div>
+            </div>
+          </div>
+          <div class="rightBlockMap">
+            <div id="map" style="width: 780px; height: 340px"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="spaceBlock"></div>
+      <div class="footerContainer">
+        <div class="footerSections">
+          <div class="leftSection">
+            <div class="logoTspk">
+              <img src="Tspklogo.png" alt="logoTspk" />
+            </div>
+            <p style = "font-size: 12px; line-height: 15px; font-weight: 800;color:#fff; margin-top: 30px;">МЫ В СОЦ. СЕТЯХ</p>
+            <div class="socialImgs">
+              <img src="vkImg.png" alt="vkImg" />
+              <img src="TelegramImg.png" alt="TelegramImg" />
+            </div>
+          </div>
+          <div class="middleSection">
+            <form action="" class="ContactWithUs">
+
+              <div class="contactLeftBlock">
+                <div class="labeldiv">
+                  <label for="text">ЗАДАТЬ ВОПРОС ПРОФЕССИОНАЛЬНОМУ КОЛЛЕДЖУ</label>
+                </div>
+
+                <div class="contactWithUs">
+                  <label for="text">Ваше имя <span style = "color: red;">*</span></label>
+                  <input style = "width: 300px; height: 40px;     border: none;
+                  border-radius: 3px;" type="text" class="nameInput" />
+                </div>
+                <div class="contactWithUs">
+                  <label for="phone">Ваш номер <span style = "color: red;">*</span></label>
+                  <input style = "width: 300px; height: 40px;     border: none;
+                  border-radius: 3px;" type="phone" class="phoneInput" />
+                </div>
+                <div class="contactWithUs">
+                  <label for="email">Ваш email <span style = "color: red;">*</span></label>
+                  <input style = "width: 300px; height: 40px;     border: none;
+                  border-radius: 3px;" type="email" class="emailInput" />
+                  
+
+                </div>
+                <input type="submit" value="Отправить" class="contactButton"/>
+                <div class="contactWithUs">
+                </div>
+              </div>
+              <div class="contactRightBlock">
+                <label for="textarea">Ваше сообщение <span style = "color: red;">*</span></label>
+                <textarea name="userMessage" id="userMsgText" cols="30" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="rightSection">
+            <div class="contactsInfo">
+              <p class = "contactsTitle">КОНТАКТЫ</p>
+              <div class="addressblock">
+                <div class="firstContacts">
+                  <p style = "font-weight: 500;">1 корпус:</p>
+                  <p>24-10-25 - Вахта 1 корпуса</p>
+                  <p>24-30-54 - Приемная директора</p>
+                  <p>E-mail: tspk@edu.tgl.ru</p>
+                </div>
+                <div class="secondContacts">
+                  <p>2 корпус:</p>
+                  <p>48-20-93 - Вахта 2 корпуса</p>
+                  <p>28-36-44 - Секретарь директора</p>
+                  <p>E-mail: tspk-zo@yandex.ru - заочное отделение</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrightBlock">
+        <span>ГАПОУ ТСПК | Дизайн, верстка, программирование | Шаров С.А. Ser53231987@yandex.ru | Тольятти, 2023 г.</span>
+      </div>
+    </footer>
+  </body>
+</html>
